@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Neobrutalism Structural Utility Classes with PDF-inspired Dark Navy and Slate accents */
+.neo-box {
+  border: 2px solid #131A45;
+  box-shadow: 4px 4px 0px 0px #131A45;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.neo-box-sm {
+  border: 2px solid #131A45;
+  box-shadow: 2px 2px 0px 0px #131A45;
+  border-radius: 6px;
+}
+
+.neo-box-lg {
+  border: 3px solid #131A45;
+  box-shadow: 6px 6px 0px 0px #131A45;
+  border-radius: 12px;
+}
+
+.neo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border: 2px solid #131A45;
+  box-shadow: 3px 3px 0px 0px #131A45;
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.neo-button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px 0px #131A45;
+}
+
+.neo-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #131A45;
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(#131A45 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Radiating Radius Ripple Animation for the Impact Center */
+@keyframes ripple-pulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-ripple {
+  animation: ripple-pulse 4s ease-in-out infinite;
+}
+
+.animate-ripple-delayed {
+  animation: ripple-pulse 4s ease-in-out infinite 1.5s;
+}
+
+.animate-radar {
+  animation: radar-sweep 12s linear infinite;
+}
+
+@keyframes sphere-breathe {
+  0%, 100% {
+    transform: scale(0.96);
+    filter: brightness(0.98);
+  }
+  50% {
+    transform: scale(1.03);
+    filter: brightness(1.04);
+  }
+}
+
+.animate-sphere {
+  animation: sphere-breathe 5s ease-in-out infinite;
+}
+
+.faded-orange-sphere {
+  background: radial-gradient(circle at 38% 32%, #FFF3EB 0%, #FFD0BA 26%, #FFA783 58%, #F27C4F 88%, #E46535 100%);
+  box-shadow: 0 10px 32px -4px rgba(242, 124, 79, 0.42), 0 0 0 1px rgba(228, 101, 53, 0.18);
+}

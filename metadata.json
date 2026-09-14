@@ -1,0 +1,6 @@
+{
+  "name": "BIA — Business Impact Agent",
+  "description": "Portfolio case study for Business Impact Agent (BIA): self-service agentic framework for rule changes in enterprise systems, created by Nima Behravan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
